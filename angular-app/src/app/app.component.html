@@ -1,0 +1,25 @@
+<form class="example-form">
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Search" value="">
+    </mat-form-field>
+</form>
+  
+
+<table *ngIf="products">
+  <tr>
+    <th>Img</th>
+    <th>Acin</th>
+    <th>Price</th>
+    <th>Bsr category</th>
+    <th>Link</th>
+    <th>Name</th>
+  </tr>
+  <tr *ngFor="let product of products">
+    <td><img [attr.src]="product.img" style="width:50px"></td>
+    <td>{{product.asin}}</td>
+    <td>{{product.price}}</td>
+    <td>{{product.bsr_category}}</td>
+    <td>{{product.link}}</td>
+    <td>{{product.name}}</td>
+  </tr>
+</table>
