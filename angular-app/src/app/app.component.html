@@ -3,23 +3,26 @@
       <input matInput placeholder="Search" value="">
     </mat-form-field>
 </form>
-  
 
-<table *ngIf="products">
-  <tr>
-    <th>Img</th>
-    <th>Acin</th>
-    <th>Price</th>
-    <th>Bsr category</th>
-    <th>Link</th>
-    <th>Name</th>
-  </tr>
-  <tr *ngFor="let product of products">
-    <td><img [attr.src]="product.img" style="width:50px"></td>
-    <td>{{product.asin}}</td>
-    <td>{{product.price}}</td>
-    <td>{{product.bsr_category}}</td>
-    <td>{{product.link}}</td>
-    <td>{{product.name}}</td>
-  </tr>
-</table>
+<main *ngIf="products">
+  <mat-card class="example-card" *ngFor="let product of products">
+    <mat-card-header >
+      <mat-card-subtitle>{{product.name}}</mat-card-subtitle>
+    </mat-card-header>
+    <img [attr.src]="product.img">
+    <mat-card-content>
+      <p>
+        price - {{product.price}}
+      </p>
+      <p>
+        asin - {{product.asin}}
+      </p>
+      <p>
+        category - {{product.bsr_category}}
+      </p>
+      <p>
+        link - {{product.link}}
+      </p>
+    </mat-card-content>
+  </mat-card>
+</main>
