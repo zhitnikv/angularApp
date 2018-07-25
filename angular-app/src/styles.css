@@ -1,1 +1,18 @@
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
+.example-card {
+  max-width: 400px;
+  margin: 10px;
+}
+
+.example-header-image {
+  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+  background-size: cover;
+}
+
+img {
+  height: 200px;
+}
+
+p {
+  overflow: auto;
+}
