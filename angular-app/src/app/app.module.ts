@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import {MatInputModule} from '@angular/material';
+import {MatInputModule, MatCardModule} from '@angular/material';
 
 
 @NgModule({
@@ -12,6 +12,7 @@ import {MatInputModule} from '@angular/material';
   imports: [
     BrowserModule,
     MatInputModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
