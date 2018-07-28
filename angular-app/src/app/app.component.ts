@@ -19,7 +19,5 @@ export class AppComponent implements OnInit {
     apiData.subscribe(
       res => this.products = res.response.products as Product[]
     );
-
   }
-  
 }
