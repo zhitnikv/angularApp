@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ajax } from 'rxjs/ajax'; 
 
-import { Product } from './app.models';
+import { Product, Category } from './app.models';
 
 @Component({
   selector: 'app-root',
@@ -13,6 +13,8 @@ export class AppComponent implements OnInit {
 
   title = 'app';
   products: Product[];
+  public selectedCategory: Category;
+  
 
   ngOnInit() {
     const apiData = ajax('https://demo1999833.mockable.io/products');
@@ -20,4 +22,9 @@ export class AppComponent implements OnInit {
       res => this.products = res.response.products as Product[]
     );
   }
+
+  onSelect(category: Category): void {
+    this.selectedCategory = category;
+  }
+
 }
