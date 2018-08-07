@@ -8,3 +8,13 @@ export class Product {
     public asin: string
   ) { }
 }
+
+
+export class Category {
+  name: string;
+  link: string;
+  img: string;
+  price: number;
+  bsr_category: string;
+  asin: string
+}
