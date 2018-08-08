@@ -6,6 +6,7 @@
 
 <mat-button-toggle-group vertical name="fontStyle" aria-label="Font Style">
  
+  <mat-button-toggle>All products</mat-button-toggle>
   <mat-button-toggle *ngFor="let item of (products | categoriesList)" (click)="onSelect(item)">{{item}}</mat-button-toggle>
   
 </mat-button-toggle-group>
